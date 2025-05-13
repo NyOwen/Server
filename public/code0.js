@@ -1,5 +1,9 @@
 gdjs.MainCode = {};
 gdjs.MainCode.localVariables = [];
+gdjs.MainCode.GDP1ButtonObjects1_1final = [];
+
+gdjs.MainCode.GDP2ButtonObjects1_1final = [];
+
 gdjs.MainCode.GDQuitButtonObjects1_1final = [];
 
 gdjs.MainCode.GDTitleObjects1= [];
@@ -52,18 +56,42 @@ gdjs.copyArray(runtimeScene.getObjects("HSText"), gdjs.MainCode.GDHSTextObjects1
 
 {
 
-gdjs.copyArray(runtimeScene.getObjects("P1Button"), gdjs.MainCode.GDP1ButtonObjects1);
+gdjs.MainCode.GDP1ButtonObjects1.length = 0;
+
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.MainCode.GDP1ButtonObjects1.length;i<l;++i) {
-    if ( gdjs.MainCode.GDP1ButtonObjects1[i].IsClicked((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
-        isConditionTrue_0 = true;
-        gdjs.MainCode.GDP1ButtonObjects1[k] = gdjs.MainCode.GDP1ButtonObjects1[i];
+{gdjs.MainCode.GDP1ButtonObjects1_1final.length = 0;
+let isConditionTrue_1 = false;
+isConditionTrue_0 = false;
+{
+gdjs.copyArray(runtimeScene.getObjects("P1Button"), gdjs.MainCode.GDP1ButtonObjects2);
+for (var i = 0, k = 0, l = gdjs.MainCode.GDP1ButtonObjects2.length;i<l;++i) {
+    if ( gdjs.MainCode.GDP1ButtonObjects2[i].IsClicked((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
+        isConditionTrue_1 = true;
+        gdjs.MainCode.GDP1ButtonObjects2[k] = gdjs.MainCode.GDP1ButtonObjects2[i];
         ++k;
     }
 }
-gdjs.MainCode.GDP1ButtonObjects1.length = k;
+gdjs.MainCode.GDP1ButtonObjects2.length = k;
+if(isConditionTrue_1) {
+    isConditionTrue_0 = true;
+    for (let j = 0, jLen = gdjs.MainCode.GDP1ButtonObjects2.length; j < jLen ; ++j) {
+        if ( gdjs.MainCode.GDP1ButtonObjects1_1final.indexOf(gdjs.MainCode.GDP1ButtonObjects2[j]) === -1 )
+            gdjs.MainCode.GDP1ButtonObjects1_1final.push(gdjs.MainCode.GDP1ButtonObjects2[j]);
+    }
+}
+}
+{
+isConditionTrue_1 = gdjs.evtsExt__Gamepads__C_Button_pressed.func(runtimeScene, 1, "A", (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+if(isConditionTrue_1) {
+    isConditionTrue_0 = true;
+}
+}
+{
+gdjs.copyArray(gdjs.MainCode.GDP1ButtonObjects1_1final, gdjs.MainCode.GDP1ButtonObjects1);
+}
+}
 if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("SquareWhiteSlider"), gdjs.MainCode.GDSquareWhiteSliderObjects1);
 {runtimeScene.getGame().getVariables().getFromIndex(6).setNumber((( gdjs.MainCode.GDSquareWhiteSliderObjects1.length === 0 ) ? 0 :gdjs.MainCode.GDSquareWhiteSliderObjects1[0].Value((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined))));
@@ -75,18 +103,42 @@ gdjs.copyArray(runtimeScene.getObjects("SquareWhiteSlider"), gdjs.MainCode.GDSqu
 
 {
 
-gdjs.copyArray(runtimeScene.getObjects("P2Button"), gdjs.MainCode.GDP2ButtonObjects1);
+gdjs.MainCode.GDP2ButtonObjects1.length = 0;
+
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.MainCode.GDP2ButtonObjects1.length;i<l;++i) {
-    if ( gdjs.MainCode.GDP2ButtonObjects1[i].IsClicked((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
-        isConditionTrue_0 = true;
-        gdjs.MainCode.GDP2ButtonObjects1[k] = gdjs.MainCode.GDP2ButtonObjects1[i];
+{gdjs.MainCode.GDP2ButtonObjects1_1final.length = 0;
+let isConditionTrue_1 = false;
+isConditionTrue_0 = false;
+{
+gdjs.copyArray(runtimeScene.getObjects("P2Button"), gdjs.MainCode.GDP2ButtonObjects2);
+for (var i = 0, k = 0, l = gdjs.MainCode.GDP2ButtonObjects2.length;i<l;++i) {
+    if ( gdjs.MainCode.GDP2ButtonObjects2[i].IsClicked((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
+        isConditionTrue_1 = true;
+        gdjs.MainCode.GDP2ButtonObjects2[k] = gdjs.MainCode.GDP2ButtonObjects2[i];
         ++k;
     }
 }
-gdjs.MainCode.GDP2ButtonObjects1.length = k;
+gdjs.MainCode.GDP2ButtonObjects2.length = k;
+if(isConditionTrue_1) {
+    isConditionTrue_0 = true;
+    for (let j = 0, jLen = gdjs.MainCode.GDP2ButtonObjects2.length; j < jLen ; ++j) {
+        if ( gdjs.MainCode.GDP2ButtonObjects1_1final.indexOf(gdjs.MainCode.GDP2ButtonObjects2[j]) === -1 )
+            gdjs.MainCode.GDP2ButtonObjects1_1final.push(gdjs.MainCode.GDP2ButtonObjects2[j]);
+    }
+}
+}
+{
+isConditionTrue_1 = gdjs.evtsExt__Gamepads__C_Button_pressed.func(runtimeScene, 1, "B", (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+if(isConditionTrue_1) {
+    isConditionTrue_0 = true;
+}
+}
+{
+gdjs.copyArray(gdjs.MainCode.GDP2ButtonObjects1_1final, gdjs.MainCode.GDP2ButtonObjects1);
+}
+}
 if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("SquareWhiteSlider"), gdjs.MainCode.GDSquareWhiteSliderObjects1);
 {runtimeScene.getGame().getVariables().getFromIndex(6).setNumber((( gdjs.MainCode.GDSquareWhiteSliderObjects1.length === 0 ) ? 0 :gdjs.MainCode.GDSquareWhiteSliderObjects1[0].Value((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined))));
