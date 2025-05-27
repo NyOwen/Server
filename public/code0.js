@@ -47,7 +47,7 @@ let isConditionTrue_0 = false;
 {
 gdjs.copyArray(runtimeScene.getObjects("HSText"), gdjs.MainCode.GDHSTextObjects1);
 {for(var i = 0, len = gdjs.MainCode.GDHSTextObjects1.length ;i < len;++i) {
-    gdjs.MainCode.GDHSTextObjects1[i].getBehavior("Text").setText(runtimeScene.getGame().getVariables().getFromIndex(8).getAsString());
+    gdjs.MainCode.GDHSTextObjects1[i].getBehavior("Text").setText(runtimeScene.getGame().getVariables().getFromIndex(10).getChild("HighScore").getAsString());
 }
 }}
 
@@ -95,6 +95,7 @@ gdjs.copyArray(gdjs.MainCode.GDP1ButtonObjects1_1final, gdjs.MainCode.GDP1Button
 if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("SquareWhiteSlider"), gdjs.MainCode.GDSquareWhiteSliderObjects1);
 {runtimeScene.getGame().getVariables().getFromIndex(6).setNumber((( gdjs.MainCode.GDSquareWhiteSliderObjects1.length === 0 ) ? 0 :gdjs.MainCode.GDSquareWhiteSliderObjects1[0].Value((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined))));
+}{runtimeScene.getGame().getVariables().getFromIndex(10).getChild("StartLevel").setNumber((( gdjs.MainCode.GDSquareWhiteSliderObjects1.length === 0 ) ? 0 :gdjs.MainCode.GDSquareWhiteSliderObjects1[0].Value((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined))));
 }{gdjs.evtTools.runtimeScene.pushScene(runtimeScene, "P1Game");
 }}
 
