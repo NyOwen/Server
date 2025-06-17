@@ -47,7 +47,7 @@ let isConditionTrue_0 = false;
 {
 gdjs.copyArray(runtimeScene.getObjects("HSText"), gdjs.MainCode.GDHSTextObjects1);
 {for(var i = 0, len = gdjs.MainCode.GDHSTextObjects1.length ;i < len;++i) {
-    gdjs.MainCode.GDHSTextObjects1[i].getBehavior("Text").setText(runtimeScene.getGame().getVariables().getFromIndex(11).getChild(0).getAsString());
+    gdjs.MainCode.GDHSTextObjects1[i].getBehavior("Text").setText(runtimeScene.getGame().getVariables().getFromIndex(11).getChild(0).getChild("Score").getAsString());
 }
 }}
 
